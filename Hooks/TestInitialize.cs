@@ -1,6 +1,7 @@
 ﻿using System;
 using AutomationExcercise.Drivers;
 using AutomationExcercise.Utilities;
+using AutomationExercise.DriverManagers;
 using AventStack.ExtentReports;
 using OpenQA.Selenium;
 using Reqnroll;
@@ -13,12 +14,13 @@ namespace AutomationExcercise.Hooks
         private readonly IWebDriver _driver;
         private readonly ScenarioContext _scenarioContext;
         private readonly FeatureContext _featureContext;
-
-        public TestInitialize(IWebDriver driver, ScenarioContext scenarioContext, FeatureContext featureContext)
+        private readonly IDriverManager _driverManager;
+        public TestInitialize(IWebDriver driver, IDriverManager driverManager, ScenarioContext scenarioContext, FeatureContext featureContext)
         {
             _driver = driver;
             _scenarioContext = scenarioContext;
             _featureContext = featureContext;
+            _driverManager = driverManager;
         }
         [BeforeTestRun]
         public static void BeforeTestRun() => ReportManager.CreateReport();
@@ -76,7 +78,7 @@ namespace AutomationExcercise.Hooks
             else
                 scenarioTest.Pass("Scenario passed");
 
-            DriverFactory.QuitDriver();
+            _driverManager.QuitDriver();
         }
 
         [AfterTestRun]
