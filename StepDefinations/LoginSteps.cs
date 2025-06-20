@@ -1,6 +1,9 @@
 using System;
+using System.ComponentModel.DataAnnotations;
+using AutomationExcercise.Models;
 using AutomationExcercise.Pages;
 using AutomationExcercise.Utilities;
+using Microsoft.VisualStudio.TestPlatform.CommunicationUtilities;
 using OpenQA.Selenium;
 using Reqnroll;
 
@@ -27,9 +30,10 @@ namespace AutomationExcercise.StepDefinations
         [StepDefinition("user enters valid credentials")]
         public void WhenUserEntersValidCredentials()
         {
-            string str = _loginPage.EnterUserNameToGet("test970@gmail.com");
-            UnifiedLogger.Info(str);
-            _loginPage.EnterPassword("test@970");
+            var credential = JsonDataReader.LoadJson<CredentialSet>("TestData/Credentials.json");
+            var validCred = credential.validCredentials;
+            _loginPage.EnterUserName(validCred.username);
+            _loginPage.EnterPassword(validCred.password);
         }
 
         [StepDefinition("user click the login button")]
@@ -44,22 +48,25 @@ namespace AutomationExcercise.StepDefinations
             throw new PendingStepException();
         }
 
-        [StepDefinition("user enter email {string} and password {string}")]
-        public void WhenUserEnterEmailAndPassword(string username, string password)
+        [StepDefinition("user enters invalid credentials")]
+        public void WhenUserEntersInvalidCredentials()
         {
-            _loginPage.EnterUserName(username);
-            _loginPage.EnterPassword(password);
+            var creds = JsonDataReader.LoadJson<CredentialSet>("TestData/Credentials.json");
+            var invalidCreds = creds.inValidCredentials;
+            _loginPage.EnterUserName(invalidCreds.username);
+            _loginPage.EnterPassword(invalidCreds.password);
         }
 
-        [StepDefinition("user should see error message {string}")]
-        public void ThenUserShouldSeeErrorMessage(string message)
+        [StepDefinition("user should see error message displayed")]
+        public void ThenUserShouldSeeErrorMessageDisplayed()
         {
-            bool isErrorDisplayed = _loginPage.VerifyingErrorMessage(message);
+            var errorMessage = JsonDataReader.LoadJson<CredentialSet>("TestData/Credentials.json");
+            var invalidCreds = errorMessage.errorMessages;
+            bool isErrorDisplayed = _loginPage.VerifyingErrorMessage(invalidCreds.loginErrorMessage);
             if (!isErrorDisplayed)
             {
-                throw new Exception($"Expected error message '{message}' was not displayed.");
+                throw new Exception($"Expected error message '{invalidCreds.loginErrorMessage}' was not displayed.");
             }
         }
-
     }
 }

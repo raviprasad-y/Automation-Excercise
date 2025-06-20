@@ -11,7 +11,7 @@
 #region Designer generated code
 #pragma warning disable
 using Reqnroll;
-namespace AutomationExcercise.Features
+namespace AutomationExercise.Features
 {
     
     
@@ -134,14 +134,10 @@ this.ScenarioInitialize(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Unsuccessful login with invalid credentials")]
-        [NUnit.Framework.TestCaseAttribute("wrong@example.com", "wrongpass", "Your email or password is incorrect!", null)]
-        public async global::System.Threading.Tasks.Task UnsuccessfulLoginWithInvalidCredentials(string email, string password, string errorMessage, string[] exampleTags)
+        public async global::System.Threading.Tasks.Task UnsuccessfulLoginWithInvalidCredentials()
         {
-            string[] tagsOfScenario = exampleTags;
+            string[] tagsOfScenario = ((string[])(null));
             global::System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new global::System.Collections.Specialized.OrderedDictionary();
-            argumentsOfScenario.Add("email", email);
-            argumentsOfScenario.Add("password", password);
-            argumentsOfScenario.Add("errorMessage", errorMessage);
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Unsuccessful login with invalid credentials", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 9
 this.ScenarioInitialize(scenarioInfo);
@@ -157,13 +153,13 @@ this.ScenarioInitialize(scenarioInfo);
     await testRunner.WhenAsync("user navigate to the login page", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
 #line 11
-    await testRunner.AndAsync(string.Format("user enter email \"{0}\" and password \"{1}\"", email, password), ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+    await testRunner.AndAsync("user enters invalid credentials", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
 #line 12
     await testRunner.AndAsync("user click the login button", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
 #line 13
-    await testRunner.ThenAsync(string.Format("user should see error message \"{0}\"", errorMessage), ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
+    await testRunner.ThenAsync("user should see error message displayed", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
             }
             await this.ScenarioCleanupAsync();

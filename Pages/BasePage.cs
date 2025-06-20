@@ -150,6 +150,64 @@ namespace AutomationExcercise.Pages
             UnifiedLogger.Info("Switched back to main window.");
         }
 
+        //----------iFrames----------
+        protected void SwitchToFrame(By locator)
+        {
+            _driver.SwitchTo().Frame(WaitUntilVisible(locator));
+            UnifiedLogger.Info($"Switched to frame: {locator}");
+        }
+        protected void SwitchToDefaultContent()
+        {
+            _driver.SwitchTo().DefaultContent();
+            UnifiedLogger.Info("Switched to default content from iframe,");
+        }
+
+        //----------Actions----------
+        protected void Hover(By locator)
+        {
+            actions.MoveToElement(WaitUntilVisible(locator)).Build().Perform();
+            UnifiedLogger.Info($"Hovered over element: {locator}.");
+        }
+        protected void DoubleClick(By locator)
+        {
+            actions.DoubleClick(WaitUntilVisible(locator)).Build().Perform();
+            UnifiedLogger.Info($"Double clicked on element: {locator}.");
+        }
+        protected void RightClick(By locator)
+        {
+            actions.ContextClick(WaitUntilVisible(locator)).Build().Perform();
+            UnifiedLogger.Info($"Right clicked on element: {locator}.");
+        }
+        protected void DragAndDrop(By source, By target)
+        {
+            actions.DragAndDrop(WaitUntilVisible(source), WaitUntilVisible(target)).Build().Perform();
+            UnifiedLogger.Info($"Dragged and dropped from {source} to {target}.");
+        }
+        protected void EnterUsingActions(By locator, string text)
+        {
+            actions.MoveToElement(WaitUntilVisible(locator))
+                   .Click()
+                   .SendKeys(text)
+                   .Build()
+                   .Perform();
+            UnifiedLogger.Info($"Entered text '{text}' using Actions on element: {locator}.");
+        }
+
+        //----------scroll----------
+        protected void ScrollIntoView(By locator)
+        {
+            IJavaScriptExecutor js = (IJavaScriptExecutor)_driver;
+            var element = WaitUntilVisible(locator);
+            js.ExecuteScript("arguments[0].scrollIntoView(true);", element);
+            UnifiedLogger.Info($"Scrolled into view: {locator}");
+        }
+        protected void ScrollToBottom()
+        {
+            IJavaScriptExecutor js = (IJavaScriptExecutor)_driver;
+            js.ExecuteScript("window.ScrollTo(0, document.body.scrollHeight);");
+            UnifiedLogger.Info("Scrolled to the bottom of the page.");
+        }
+
 
     }
 }

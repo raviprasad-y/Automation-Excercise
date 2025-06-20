@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35931.197 d17.13
+VisualStudioVersion = 17.13.35931.197
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutomationExcercise", "AutomationExcercise.csproj", "{3922BE0C-62EA-4D6D-AF8D-3B78F2CA7924}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutomationExercise", "AutomationExercise.csproj", "{3922BE0C-62EA-4D6D-AF8D-3B78F2CA7924}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

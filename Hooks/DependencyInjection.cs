@@ -18,7 +18,7 @@ public class DependencyInjection
     {
         var services = new ServiceCollection();
 
-        services.AddSingleton<IWebDriver>(sp => DriverFactory.GetDriver());
+        services.AddScoped<IWebDriver>(sp => DriverFactory.GetDriver());
         services.AddTransient<WaitHelper>();
         services.AddTransient<LoginPage>();
         services.AddTransient<ProductPage>(); // <-- Add this line

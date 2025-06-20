@@ -31,13 +31,16 @@ namespace AutomationExcercise.Hooks
         public void BeforeScenario()
         {
             string url = ConfigReader.Get("BaseUrl");
-            _driver.Navigate().GoToUrl(url);
+            // Ensure _driver is not null or disposed
+            if (_driver == null)
+                throw new InvalidOperationException("WebDriver is not initialized.");
             ReportManager.CreateScenario(_scenarioContext.ScenarioInfo.Title);
 
             // Log scenario tags and metadata
             var tags = string.Join(", ", _scenarioContext.ScenarioInfo.Tags);
             ReportManager.GetScenarioTest().Info($"Tags: {tags}");
             ReportManager.GetScenarioTest().Info($"Browser: {ConfigReader.Get("browser")}");
+            _driver.Navigate().GoToUrl(url); // Move navigation after reporting setup
         }
 
         [AfterStep]

@@ -8,21 +8,20 @@ using OpenQA.Selenium;
 
 namespace AutomationExcercise.Pages
 {
-    public class LoginPage
+    public class LoginPage : BasePage
     {
         private readonly IWebDriver _driver;
 
-        public LoginPage(IWebDriver driver)
+        public LoginPage(IWebDriver driver) : base(driver)
         {
             _driver = driver;
         }
 
         //Locators
-        private IWebElement UserName => _driver.FindElement(By.XPath("//input[@data-qa='login-email']"));
-        private IWebElement Password => _driver.FindElement(By.XPath("//input[@data-qa='login-password']"));
-        private IWebElement LoginButton => _driver.FindElement(By.XPath("//button[@data-qa='login-button']"));
-        //private IWebElement ErrorMessage(string message) => _driver.FindElement(By.XPath("//*[text()='Your email or password is incorrect!']"));
-        private IWebElement ErrorMessage(string message) => _driver.FindElement(By.XPath("//*[text()='"+ message+"']"));
+        private readonly By UserName = By.XPath("//input[@data-qa='login-email']");
+        private readonly By Password = By.XPath("//input[@data-qa='login-password']");
+        private readonly By LoginButton = By.XPath("//button[@data-qa='login-button']");
+        private static By ErrorMessage(string message) => By.XPath($"//*[text()='{message}']");
         
         public void GoToLoginPage()
         {
@@ -31,28 +30,20 @@ namespace AutomationExcercise.Pages
 
         public void EnterUserName(string username)
         {
-            UserName.Clear();
-            UserName.SendKeys(username);
+            SendKeys(UserName, username);
         }
-        public string EnterUserNameToGet(string username)
-        {
-            UserName.Clear();
-            UserName.SendKeys(username);
-            string val = UserName.GetAttribute("value");
-            return val;
-        }
+        
         public void EnterPassword(string password) 
         {
-            Password.Clear();
-            Password.SendKeys(password);
+            SendKeys(Password, password);
         }
         public void ClickLogin()
         {
-            LoginButton.Click();
+            Click(LoginButton);
         }
         public bool VerifyingErrorMessage(string message)
         {
-            return ErrorMessage(message).Displayed;
+            return IsDisplayed(ErrorMessage(message));
         }
     }
 }
