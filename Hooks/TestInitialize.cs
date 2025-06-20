@@ -12,35 +12,30 @@ namespace AutomationExcercise.Hooks
     {
         private readonly IWebDriver _driver;
         private readonly ScenarioContext _scenarioContext;
+        private readonly FeatureContext _featureContext;
 
-        public TestInitialize(IWebDriver driver, ScenarioContext scenarioContext)
+        public TestInitialize(IWebDriver driver, ScenarioContext scenarioContext, FeatureContext featureContext)
         {
             _driver = driver;
             _scenarioContext = scenarioContext;
+            _featureContext = featureContext;
         }
-
-        [BeforeFeature]
-        public static void BeforeFeature(FeatureContext featureContext)
-        {
-            string featureTitle = featureContext.FeatureInfo.Title;
-            ReportManager.CreateReport(featureTitle);
-            ReportManager.CreateFeature(featureContext.FeatureInfo.Title);
-        }
+        [BeforeTestRun]
+        public static void BeforeTestRun() => ReportManager.CreateReport();
 
         [BeforeScenario]
         public void BeforeScenario()
         {
-            string url = ConfigReader.Get("BaseUrl");
-            // Ensure _driver is not null or disposed
-            if (_driver == null)
-                throw new InvalidOperationException("WebDriver is not initialized.");
-            ReportManager.CreateScenario(_scenarioContext.ScenarioInfo.Title);
+            ReportManager.CreateScenario(_featureContext.FeatureInfo.Title, _scenarioContext.ScenarioInfo.Title);
 
-            // Log scenario tags and metadata
-            var tags = string.Join(", ", _scenarioContext.ScenarioInfo.Tags);
-            ReportManager.GetScenarioTest().Info($"Tags: {tags}");
-            ReportManager.GetScenarioTest().Info($"Browser: {ConfigReader.Get("browser")}");
-            _driver.Navigate().GoToUrl(url); // Move navigation after reporting setup
+            var scenarioNode = ReportManager.GetScenarioTest();
+            scenarioNode.AssignCategory(_featureContext.FeatureInfo.Title);
+            scenarioNode.AssignAuthor("QA_Automation");
+            scenarioNode.AssignCategory(string.Join(",", _scenarioContext.ScenarioInfo.Tags));
+
+            scenarioNode.Info($"Tags: {string.Join(", ", _scenarioContext.ScenarioInfo.Tags)}");
+            scenarioNode.Info($"Browser: {ConfigReader.Get("browser")}");
+            _driver.Navigate().GoToUrl(ConfigReader.Get("BaseUrl"));
         }
 
         [AfterStep]
@@ -49,31 +44,21 @@ namespace AutomationExcercise.Hooks
             var stepInfo = _scenarioContext.StepContext.StepInfo;
             var stepNode = ReportManager.CreateStep(stepInfo.Text);
 
-            string screenshotMode = ConfigReader.GetScreenshotMode();
-            bool shouldCapture = screenshotMode == "Always" ||
-                                 (screenshotMode == "OnFailure" && _scenarioContext.TestError != null);
-
-            string screenshotPath = null;
-            if (shouldCapture)
-            {
-                screenshotPath = ReportManager.CaptureScreenshot(_driver, _scenarioContext.ScenarioInfo.Title, stepInfo.Text);
-            }
+            string mode = ConfigReader.GetScreenshotMode();
+            bool capture = mode == "Always" || (mode == "OnFailure" && _scenarioContext.TestError != null);
+            string screenshotPath = capture ? ReportManager.CaptureScreenshot(_driver, _scenarioContext.ScenarioInfo.Title, stepInfo.Text) : null;
 
             try
             {
                 if (_scenarioContext.TestError != null)
                 {
-                    if (screenshotPath != null)
-                        stepNode.Fail("Step failed").AddScreenCaptureFromPath(screenshotPath);
-                    else
-                        stepNode.Fail("Step failed");
+                    stepNode.Fail(_scenarioContext.TestError.ToString());
+                    if (screenshotPath != null) stepNode.AddScreenCaptureFromPath(screenshotPath);
                 }
                 else
                 {
-                    if (screenshotPath != null)
-                        stepNode.Pass("Step passed").AddScreenCaptureFromPath(screenshotPath);
-                    else
-                        stepNode.Pass("Step passed");
+                    stepNode.Pass("Step passed");
+                    if (screenshotPath != null) stepNode.AddScreenCaptureFromPath(screenshotPath);
                 }
             }
             catch (Exception ex)
@@ -87,20 +72,17 @@ namespace AutomationExcercise.Hooks
         {
             var scenarioTest = ReportManager.GetScenarioTest();
             if (_scenarioContext.TestError != null)
-            {
                 scenarioTest.Fail(_scenarioContext.TestError.Message);
-            }
             else
-            {
                 scenarioTest.Pass("Scenario passed");
-            }
 
             DriverFactory.QuitDriver();
         }
 
-        [AfterFeature]
-        public static void AfterFeature()
+        [AfterTestRun]
+        public static void AfterTestRun()
         {
+            ReportManager.GetExtent().AddTestRunnerLogs($"Test run ended at: {DateTime.Now}");
             ReportManager.FlushReport();
         }
     }
