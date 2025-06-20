@@ -1,0 +1,10 @@
+﻿{
+    "bindingCulture": {
+        "language": "en-us"
+    },
+    "runtime": {
+        "stopAtFirstError": false,
+        "missingOrPendingStepsOutcome": "Error",
+        "multiThreadedExecution": true
+    }
+}

@@ -46,8 +46,9 @@ namespace AutomationExcercise.Utilities
                 _extent = new ExtentReports();
                 _extent.AttachReporter(_sparkReporter);
 
-                //_extent.AddSystemInfo("Environment", ConfigReader.Get("Environment"));
+                _extent.AddSystemInfo("Environment", ConfigReader.Get("Environment"));
                 _extent.AddSystemInfo("Browser", ConfigReader.Get("browser"));
+
                 _extent.AddSystemInfo("Machine", Environment.MachineName);
                 _extent.AddSystemInfo("User", Environment.UserName);
                 _extent.AddSystemInfo("Build", Environment.GetEnvironmentVariable("BUILD_ID") ?? "N/A");

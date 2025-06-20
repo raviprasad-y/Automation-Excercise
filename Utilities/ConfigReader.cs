@@ -44,5 +44,11 @@ namespace AutomationExcercise.Utilities
             return Get("ScreenshotMode") ?? "OnFailure";
         }
 
+        public static bool IsParallelExecution()
+        {
+            var mode = Get("ExecutionMode");
+            return mode.Equals("Parallel", StringComparison.OrdinalIgnoreCase);
+        }
+
     }
 }
