@@ -51,7 +51,7 @@ namespace AutomationExcercise.StepDefinations
         [StepDefinition("user enters invalid credentials")]
         public void WhenUserEntersInvalidCredentials()
         {
-            var creds = JsonDataReader.LoadJson<CredentialSet>("TestData/ICredentials.json");
+            var creds = JsonDataReader.LoadJson<CredentialSet>("TestData/Credentials.json");
             var invalidCreds = creds.inValidCredentials;
             _loginPage.EnterUserName(invalidCreds.username);
             _loginPage.EnterPassword(invalidCreds.password);
