@@ -1,0 +1,1898 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ <title></title>
+ <link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@c439bdbc7bade3d85af3b90e9e69c30ebc87445f/commons/img/logo.png">
+ <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@c439bdbc7bade3d85af3b90e9e69c30ebc87445f/commons/img/logo.png">
+ <link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@78fa5a2421587b8228150e93142e5ba97178e85b/spark/css/spark-style.css" rel="stylesheet" />
+ <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+ <script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@78fa5a2421587b8228150e93142e5ba97178e85b/spark/js/jsontree.js"></script>
+ <style></style>
+</head>
+<body class="spa  standard">
+ <div class="app">
+  <div class="layout">
+   <div class="header navbar">
+ <div class="vheader">
+  <div class="nav-logo">
+   <a href="#">
+	 <div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@c43b89d03a7c43dae8bb8f0f078bad1997af6b3b/commons/img/logo.png')"></div>
+   </a>
+  </div>
+  <ul class="nav-left">
+   <li class="search-box">
+	<a class="search-toggle" href="#"><i class="search-icon fa fa-search"></i><i class="search-icon-close fa fa-close"></i></a>
+   </li>
+   <li class="search-input">
+    <input id="search-tests" class="form-control" type="text" placeholder="Search...">
+   </li>
+  </ul>
+  <ul class="nav-right">
+   <li class="m-r-10"><a href="#"><span class="badge badge-primary"></span></a></li>
+   <li class="m-r-10">
+    <a href="#"><span class="badge badge-primary">21-06-2025 21:16:04</span></a>
+   </li>
+  </ul>
+ </div>
+</div>
+   <div class="side-nav">
+ <div class="side-nav-inner">
+  <ul class="side-nav-menu">
+   <li class="nav-item dropdown" onclick="toggleView('test-view')">
+    <a id="nav-test" class="dropdown-toggle" href="#">
+     <span class="ico"><i class="fa fa-list"></i></span>
+    </a>
+   </li>
+    <li class="nav-item dropdown" onclick="toggleView('category-view')">
+     <a id="nav-category" class="dropdown-toggle" href="#">
+      <span class="ico"><i class="fa fa-tag"></i></span>
+     </a>
+    </li>
+    <li class="nav-item dropdown" onclick="toggleView('author-view')">
+     <a id="nav-author" class="dropdown-toggle" href="#">
+      <span class="ico"><i class="fa fa-user"></i></span>
+     </a>
+    </li>
+   <li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+    <a id="nav-dashboard" class="dropdown-toggle" href="#">
+     <span class="ico"><i class="fa fa-bar-chart"></i></span>
+    </a>
+   </li>
+   <li class="nav-item dropdown" onclick="toggleView('log-view')">
+    <a id="nav-dashboard" class="dropdown-toggle" href="#">
+     <span class="ico"><i class="fa fa-clipboard"></i></span>
+    </a>
+   </li>
+  </ul>
+ </div>
+</div>
+
+   <div class="vcontainer">
+    <div class="main-content">
+     
+
+<div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+      <ul class="tools pull-left">
+        <li><a href="#"><span class="font-size-14">Tests</span></a></li>
+      </ul>
+      <ul class="tools text-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+          <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+ <a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>  <a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>             <div class="dropdown-divider"></div>
+            <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i></a>
+          <ul id="author-toggle" class="dropdown-menu dropdown-md p-v-0">
+ <a class="dropdown-item" href="#">QA_Automation</a>           </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
+          <ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+ <a class="dropdown-item" href="#">Checkout with Payment</a>  <a class="dropdown-item" href="#">User Profile and Order History</a>  <a class="dropdown-item" href="#">Product Search and Detail View</a>  <a class="dropdown-item" href="#">Login Functionality</a>  <a class="dropdown-item" href="#">Shopping Cart Operations</a>           </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item" status="fail" test-id="1"
+          author="QA_Automation "
+          tag="Login Functionality "
+          device="">
+          <div class="test-detail">
+            <p class="name">Login Functionality - Unsuccessful login with invalid credentials</p>
+            <p class="text-sm">
+              <span>21:16:24</span> / <span>12920.46 ms</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+            <div class="detail-head">
+              <div class="p-v-10">
+                <div class="info">
+                  <h5 class="test-status text-fail">Login Functionality - Unsuccessful login with invalid credentials</h5>
+                  <span class='badge badge-success'>21-06-2025 21:16:24</span>
+                  <span class='badge badge-danger'>21-06-2025 21:16:36</span>
+                  <span class='badge badge-default'>12920.46 ms</span>
+                  &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+                  <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+                  <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+                  <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+                </div>
+ <div class="m-t-15"> <span class="badge badge-pill badge-default"><i class="fa fa-user-o"></i> QA_Automation</span>   <span class="badge badge-pill badge-default"><i class="fa fa-tag"></i> Login Functionality</span> </div>               </div>
+            </div>
+
+
+<div class="detail-body mt-4">
+
+
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>Jun 21, 2025 21:16:24</td>
+        <td>
+Tags:         </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>Jun 21, 2025 21:16:24</td>
+        <td>
+Browser: chrome        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>Jun 21, 2025 21:16:36</td>
+        <td>
+Error reading json test data from TestData/ICredentials.json: The file at C:\Users\MYPC\OneDrive\Desktop\Raviprasad\AutomationExcercise\bin\Debug\net8.0\TestData/ICredentials.json does not exist.        </td>
+      </tr>
+  </tbody>
+</table></div>
+  <div class="mt-4">
+  <div class="accordion">
+      <div class="card">
+        <div class="card-header">
+            <div class="card-toolbar node-info">
+            <ul class="list-inline d-none d-sm-block">
+              <li><span class="badge pass-bg log ">Pass</span></li>
+              <li title="Time taken"><span class='badge badge-default'>0.07</span></li>
+            </ul>
+          </div>
+          <div class="card-title">
+            <div class="node" id="10">user navigate to the login page</div>
+            <div class="node-attr">
+                 <span class="badge badge-pill badge-default"><i class="fa fa-user-o"></i> QA_Automation</span>   <span class="badge badge-pill badge-default"><i class="fa fa-tag"></i> Login Functionality</span> 
+            </div>
+          </div>
+        </div>
+        <div class="collapse">
+          <div class="card-body">
+            <div class="detail-body mt-4">
+
+
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>Jun 21, 2025 21:16:36</td>
+        <td>
+Step passed        </td>
+      </tr>
+  </tbody>
+</table>            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+            <div class="card-toolbar node-info">
+            <ul class="list-inline d-none d-sm-block">
+              <li><span class="badge fail-bg log ">Fail</span></li>
+              <li title="Time taken"><span class='badge badge-default'>297.65</span></li>
+            </ul>
+          </div>
+          <div class="card-title">
+            <div class="node" id="11">user enters invalid credentials</div>
+            <div class="node-attr">
+                 <span class="badge badge-pill badge-default"><i class="fa fa-user-o"></i> QA_Automation</span>   <span class="badge badge-pill badge-default"><i class="fa fa-tag"></i> Login Functionality</span> 
+            </div>
+              <div class="status-avatar float-right"><i class="fa fa-paperclip"></i></div>
+          </div>
+        </div>
+        <div class="">
+          <div class="card-body">
+            <div class="detail-body mt-4">
+
+
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>Jun 21, 2025 21:16:36</td>
+        <td>
+System.Exception: Error reading json test data from TestData/ICredentials.json: The file at C:\Users\MYPC\OneDrive\Desktop\Raviprasad\AutomationExcercise\bin\Debug\net8.0\TestData/ICredentials.json does not exist.
+ ---> System.IO.FileNotFoundException: The file at C:\Users\MYPC\OneDrive\Desktop\Raviprasad\AutomationExcercise\bin\Debug\net8.0\TestData/ICredentials.json does not exist.
+   at AutomationExcercise.Utilities.JsonDataReader.LoadJson[T](String filePath) in C:\Users\MYPC\OneDrive\Desktop\Raviprasad\AutomationExcercise\Utilities\JsonDataReader.cs:line 19
+   --- End of inner exception stack trace ---
+   at AutomationExcercise.Utilities.JsonDataReader.LoadJson[T](String filePath) in C:\Users\MYPC\OneDrive\Desktop\Raviprasad\AutomationExcercise\Utilities\JsonDataReader.cs:line 34
+   at AutomationExcercise.StepDefinations.LoginSteps.WhenUserEntersInvalidCredentials() in C:\Users\MYPC\OneDrive\Desktop\Raviprasad\AutomationExcercise\StepDefinations\LoginSteps.cs:line 54
+   at InvokeStub_Action`1.Invoke(Object, Span`1)
+   at System.Reflection.MethodBaseInvoker.InvokeWithOneArg(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+--- End of stack trace from previous location ---
+   at Reqnroll.Bindings.BindingInvoker.InvokeBindingAsync(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, DurationHolder durationHolder)
+   at Reqnroll.Infrastructure.TestExecutionEngine.ExecuteStepMatchAsync(BindingMatch match, Object[] arguments, DurationHolder durationHolder)
+   at Reqnroll.Infrastructure.TestExecutionEngine.ExecuteStepAsync(IContextManager contextManager, StepInstance stepInstance)        </td>
+      </tr>
+  </tbody>
+</table>            </div>
+
+  <div class="row mb-3">
+   <div class="col-md-3">
+     <img data-featherlight='Screenshots\Unsuccessful login with invalid credentials\user enters invalid credentials_20250621_211636.png' src="Screenshots\Unsuccessful login with invalid credentials\user enters invalid credentials_20250621_211636.png">
+  </div>
+ </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div> 
+          </div>
+        </li>
+        <li class="test-item" status="pass" test-id="2"
+          author="QA_Automation "
+          tag="Checkout with Payment "
+          device="">
+          <div class="test-detail">
+            <p class="name">Checkout with Payment - Place order successfully</p>
+            <p class="text-sm">
+              <span>21:16:24</span> / <span>6784.97 ms</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+            <div class="detail-head">
+              <div class="p-v-10">
+                <div class="info">
+                  <h5 class="test-status text-pass">Checkout with Payment - Place order successfully</h5>
+                  <span class='badge badge-success'>21-06-2025 21:16:24</span>
+                  <span class='badge badge-danger'>21-06-2025 21:16:30</span>
+                  <span class='badge badge-default'>6784.97 ms</span>
+                  &middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
+                  <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+                  <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+                  <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+                </div>
+ <div class="m-t-15"> <span class="badge badge-pill badge-default"><i class="fa fa-user-o"></i> QA_Automation</span>   <span class="badge badge-pill badge-default"><i class="fa fa-tag"></i> Checkout with Payment</span> </div>               </div>
+            </div>
+
+
+<div class="detail-body mt-4">
+
+
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>Jun 21, 2025 21:16:24</td>
+        <td>
+Tags:         </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>Jun 21, 2025 21:16:24</td>
+        <td>
+Browser: chrome        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>Jun 21, 2025 21:16:30</td>
+        <td>
+Scenario passed        </td>
+      </tr>
+  </tbody>
+</table></div>
+          </div>
+        </li>
+        <li class="test-item" status="pass" test-id="3"
+          author="QA_Automation "
+          tag="Product Search and Detail View "
+          device="">
+          <div class="test-detail">
+            <p class="name">Product Search and Detail View - Search for an existing product</p>
+            <p class="text-sm">
+              <span>21:16:26</span> / <span>89349.6 ms</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+            <div class="detail-head">
+              <div class="p-v-10">
+                <div class="info">
+                  <h5 class="test-status text-pass">Product Search and Detail View - Search for an existing product</h5>
+                  <span class='badge badge-success'>21-06-2025 21:16:26</span>
+                  <span class='badge badge-danger'>21-06-2025 21:17:55</span>
+                  <span class='badge badge-default'>89349.6 ms</span>
+                  &middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
+                  <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+                  <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+                  <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+                </div>
+ <div class="m-t-15"> <span class="badge badge-pill badge-default"><i class="fa fa-user-o"></i> QA_Automation</span>   <span class="badge badge-pill badge-default"><i class="fa fa-tag"></i> Product Search and Detail View</span> </div>               </div>
+            </div>
+
+
+<div class="detail-body mt-4">
+
+
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>Jun 21, 2025 21:16:26</td>
+        <td>
+Tags:         </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>Jun 21, 2025 21:16:26</td>
+        <td>
+Browser: chrome        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>Jun 21, 2025 21:17:55</td>
+        <td>
+Scenario passed        </td>
+      </tr>
+  </tbody>
+</table></div>
+  <div class="mt-4">
+  <div class="accordion">
+      <div class="card">
+        <div class="card-header">
+            <div class="card-toolbar node-info">
+            <ul class="list-inline d-none d-sm-block">
+              <li><span class="badge pass-bg log ">Pass</span></li>
+              <li title="Time taken"><span class='badge badge-default'>4725.53</span></li>
+            </ul>
+          </div>
+          <div class="card-title">
+            <div class="node" id="6">user navigate to the login page</div>
+            <div class="node-attr">
+                 <span class="badge badge-pill badge-default"><i class="fa fa-user-o"></i> QA_Automation</span>   <span class="badge badge-pill badge-default"><i class="fa fa-tag"></i> Product Search and Detail View</span> 
+            </div>
+          </div>
+        </div>
+        <div class="collapse">
+          <div class="card-body">
+            <div class="detail-body mt-4">
+
+
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>Jun 21, 2025 21:16:32</td>
+        <td>
+Step passed        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>Jun 21, 2025 21:16:37</td>
+        <td>
+Sent Keys 'test970@gmail.com' to element: By.XPath: //input[@data-qa='login-email']        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>Jun 21, 2025 21:16:37</td>
+        <td>
+Sent Keys 'test@970' to element: By.XPath: //input[@data-qa='login-password']        </td>
+      </tr>
+  </tbody>
+</table>            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+            <div class="card-toolbar node-info">
+            <ul class="list-inline d-none d-sm-block">
+              <li><span class="badge pass-bg log ">Pass</span></li>
+              <li title="Time taken"><span class='badge badge-default'>50622.88</span></li>
+            </ul>
+          </div>
+          <div class="card-title">
+            <div class="node" id="12">user enters valid credentials</div>
+            <div class="node-attr">
+                 <span class="badge badge-pill badge-default"><i class="fa fa-user-o"></i> QA_Automation</span>   <span class="badge badge-pill badge-default"><i class="fa fa-tag"></i> Product Search and Detail View</span> 
+            </div>
+          </div>
+        </div>
+        <div class="collapse">
+          <div class="card-body">
+            <div class="detail-body mt-4">
+
+
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>Jun 21, 2025 21:16:37</td>
+        <td>
+Step passed        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>Jun 21, 2025 21:17:28</td>
+        <td>
+Clicked on element: By.XPath: //button[@data-qa='login-button']        </td>
+      </tr>
+  </tbody>
+</table>            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+            <div class="card-toolbar node-info">
+            <ul class="list-inline d-none d-sm-block">
+              <li><span class="badge pass-bg log ">Pass</span></li>
+              <li title="Time taken"><span class='badge badge-default'>21588.38</span></li>
+            </ul>
+          </div>
+          <div class="card-title">
+            <div class="node" id="16">user click the login button</div>
+            <div class="node-attr">
+                 <span class="badge badge-pill badge-default"><i class="fa fa-user-o"></i> QA_Automation</span>   <span class="badge badge-pill badge-default"><i class="fa fa-tag"></i> Product Search and Detail View</span> 
+            </div>
+          </div>
+        </div>
+        <div class="collapse">
+          <div class="card-body">
+            <div class="detail-body mt-4">
+
+
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>Jun 21, 2025 21:17:28</td>
+        <td>
+Step passed        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>Jun 21, 2025 21:17:49</td>
+        <td>
+Clicked on element: By.XPath: //a[@href='/products']        </td>
+      </tr>
+  </tbody>
+</table>            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+            <div class="card-toolbar node-info">
+            <ul class="list-inline d-none d-sm-block">
+              <li><span class="badge pass-bg log ">Pass</span></li>
+              <li title="Time taken"><span class='badge badge-default'>5859.51</span></li>
+            </ul>
+          </div>
+          <div class="card-title">
+            <div class="node" id="17">user on the products page</div>
+            <div class="node-attr">
+                 <span class="badge badge-pill badge-default"><i class="fa fa-user-o"></i> QA_Automation</span>   <span class="badge badge-pill badge-default"><i class="fa fa-tag"></i> Product Search and Detail View</span> 
+            </div>
+          </div>
+        </div>
+        <div class="collapse">
+          <div class="card-body">
+            <div class="detail-body mt-4">
+
+
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>Jun 21, 2025 21:17:49</td>
+        <td>
+Step passed        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>Jun 21, 2025 21:17:50</td>
+        <td>
+Sent Keys 'Blue Top' to element: By.XPath: //input[@id='search_product']        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>Jun 21, 2025 21:17:55</td>
+        <td>
+Clicked on element: By.XPath: //button[@id='submit_search']        </td>
+      </tr>
+  </tbody>
+</table>            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+            <div class="card-toolbar node-info">
+            <ul class="list-inline d-none d-sm-block">
+              <li><span class="badge pass-bg log ">Pass</span></li>
+              <li title="Time taken"><span class='badge badge-default'>109.88</span></li>
+            </ul>
+          </div>
+          <div class="card-title">
+            <div class="node" id="18">user search for "Blue Top"</div>
+            <div class="node-attr">
+                 <span class="badge badge-pill badge-default"><i class="fa fa-user-o"></i> QA_Automation</span>   <span class="badge badge-pill badge-default"><i class="fa fa-tag"></i> Product Search and Detail View</span> 
+            </div>
+          </div>
+        </div>
+        <div class="collapse">
+          <div class="card-body">
+            <div class="detail-body mt-4">
+
+
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>Jun 21, 2025 21:17:55</td>
+        <td>
+Step passed        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>Jun 21, 2025 21:17:55</td>
+        <td>
+Scrolled into view: By.XPath: //div[@class='productinfo text-center']//p[contains(text(),'Blue Top')]        </td>
+      </tr>
+  </tbody>
+</table>            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+            <div class="card-toolbar node-info">
+            <ul class="list-inline d-none d-sm-block">
+              <li><span class="badge pass-bg log ">Pass</span></li>
+              <li title="Time taken"><span class='badge badge-default'>0.04</span></li>
+            </ul>
+          </div>
+          <div class="card-title">
+            <div class="node" id="19">user should see product "Blue Top" in the results</div>
+            <div class="node-attr">
+                 <span class="badge badge-pill badge-default"><i class="fa fa-user-o"></i> QA_Automation</span>   <span class="badge badge-pill badge-default"><i class="fa fa-tag"></i> Product Search and Detail View</span> 
+            </div>
+          </div>
+        </div>
+        <div class="collapse">
+          <div class="card-body">
+            <div class="detail-body mt-4">
+
+
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>Jun 21, 2025 21:17:55</td>
+        <td>
+Step passed        </td>
+      </tr>
+  </tbody>
+</table>            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div> 
+          </div>
+        </li>
+        <li class="test-item" status="pass" test-id="4"
+          author="QA_Automation "
+          tag="User Profile and Order History "
+          device="">
+          <div class="test-detail">
+            <p class="name">User Profile and Order History - Edit user profile information</p>
+            <p class="text-sm">
+              <span>21:16:26</span> / <span>3521.23 ms</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+            <div class="detail-head">
+              <div class="p-v-10">
+                <div class="info">
+                  <h5 class="test-status text-pass">User Profile and Order History - Edit user profile information</h5>
+                  <span class='badge badge-success'>21-06-2025 21:16:26</span>
+                  <span class='badge badge-danger'>21-06-2025 21:16:30</span>
+                  <span class='badge badge-default'>3521.23 ms</span>
+                  &middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
+                  <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+                  <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+                  <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+                </div>
+ <div class="m-t-15"> <span class="badge badge-pill badge-default"><i class="fa fa-user-o"></i> QA_Automation</span>   <span class="badge badge-pill badge-default"><i class="fa fa-tag"></i> User Profile and Order History</span> </div>               </div>
+            </div>
+
+
+<div class="detail-body mt-4">
+
+
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>Jun 21, 2025 21:16:26</td>
+        <td>
+Tags:         </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>Jun 21, 2025 21:16:26</td>
+        <td>
+Browser: chrome        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>Jun 21, 2025 21:16:30</td>
+        <td>
+Scenario passed        </td>
+      </tr>
+  </tbody>
+</table></div>
+          </div>
+        </li>
+        <li class="test-item" status="pass" test-id="5"
+          author="QA_Automation "
+          tag="Shopping Cart Operations "
+          device="">
+          <div class="test-detail">
+            <p class="name">Shopping Cart Operations - Remove product from cart</p>
+            <p class="text-sm">
+              <span>21:16:26</span> / <span>3514.72 ms</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+            <div class="detail-head">
+              <div class="p-v-10">
+                <div class="info">
+                  <h5 class="test-status text-pass">Shopping Cart Operations - Remove product from cart</h5>
+                  <span class='badge badge-success'>21-06-2025 21:16:26</span>
+                  <span class='badge badge-danger'>21-06-2025 21:16:30</span>
+                  <span class='badge badge-default'>3514.72 ms</span>
+                  &middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
+                  <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+                  <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+                  <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+                </div>
+ <div class="m-t-15"> <span class="badge badge-pill badge-default"><i class="fa fa-user-o"></i> QA_Automation</span>   <span class="badge badge-pill badge-default"><i class="fa fa-tag"></i> Shopping Cart Operations</span> </div>               </div>
+            </div>
+
+
+<div class="detail-body mt-4">
+
+
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>Jun 21, 2025 21:16:26</td>
+        <td>
+Tags:         </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>Jun 21, 2025 21:16:26</td>
+        <td>
+Browser: chrome        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>Jun 21, 2025 21:16:30</td>
+        <td>
+Scenario passed        </td>
+      </tr>
+  </tbody>
+</table></div>
+          </div>
+        </li>
+        <li class="test-item" status="pass" test-id="7"
+          author="QA_Automation "
+          tag="Shopping Cart Operations "
+          device="">
+          <div class="test-detail">
+            <p class="name">Shopping Cart Operations - Update product quantity in cart</p>
+            <p class="text-sm">
+              <span>21:16:34</span> / <span>5960.15 ms</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+            <div class="detail-head">
+              <div class="p-v-10">
+                <div class="info">
+                  <h5 class="test-status text-pass">Shopping Cart Operations - Update product quantity in cart</h5>
+                  <span class='badge badge-success'>21-06-2025 21:16:34</span>
+                  <span class='badge badge-danger'>21-06-2025 21:16:40</span>
+                  <span class='badge badge-default'>5960.15 ms</span>
+                  &middot; <span class='uri-anchor badge badge-default'>#test-id=7</span>
+                  <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+                  <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+                  <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+                </div>
+ <div class="m-t-15"> <span class="badge badge-pill badge-default"><i class="fa fa-user-o"></i> QA_Automation</span>   <span class="badge badge-pill badge-default"><i class="fa fa-tag"></i> Shopping Cart Operations</span> </div>               </div>
+            </div>
+
+
+<div class="detail-body mt-4">
+
+
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>Jun 21, 2025 21:16:34</td>
+        <td>
+Tags:         </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>Jun 21, 2025 21:16:34</td>
+        <td>
+Browser: chrome        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>Jun 21, 2025 21:16:40</td>
+        <td>
+Scenario passed        </td>
+      </tr>
+  </tbody>
+</table></div>
+          </div>
+        </li>
+        <li class="test-item" status="pass" test-id="8"
+          author="QA_Automation "
+          tag="Checkout with Payment "
+          device="">
+          <div class="test-detail">
+            <p class="name">Checkout with Payment - Place order with invalid payment</p>
+            <p class="text-sm">
+              <span>21:16:35</span> / <span>2384.7 ms</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+            <div class="detail-head">
+              <div class="p-v-10">
+                <div class="info">
+                  <h5 class="test-status text-pass">Checkout with Payment - Place order with invalid payment</h5>
+                  <span class='badge badge-success'>21-06-2025 21:16:35</span>
+                  <span class='badge badge-danger'>21-06-2025 21:16:37</span>
+                  <span class='badge badge-default'>2384.7 ms</span>
+                  &middot; <span class='uri-anchor badge badge-default'>#test-id=8</span>
+                  <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+                  <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+                  <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+                </div>
+ <div class="m-t-15"> <span class="badge badge-pill badge-default"><i class="fa fa-user-o"></i> QA_Automation</span>   <span class="badge badge-pill badge-default"><i class="fa fa-tag"></i> Checkout with Payment</span> </div>               </div>
+            </div>
+
+
+<div class="detail-body mt-4">
+
+
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>Jun 21, 2025 21:16:35</td>
+        <td>
+Tags:         </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>Jun 21, 2025 21:16:35</td>
+        <td>
+Browser: chrome        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>Jun 21, 2025 21:16:37</td>
+        <td>
+Scenario passed        </td>
+      </tr>
+  </tbody>
+</table></div>
+          </div>
+        </li>
+        <li class="test-item" status="pass" test-id="9"
+          author="QA_Automation "
+          tag="User Profile and Order History "
+          device="">
+          <div class="test-detail">
+            <p class="name">User Profile and Order History - View past orders</p>
+            <p class="text-sm">
+              <span>21:16:36</span> / <span>2174.1 ms</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+            <div class="detail-head">
+              <div class="p-v-10">
+                <div class="info">
+                  <h5 class="test-status text-pass">User Profile and Order History - View past orders</h5>
+                  <span class='badge badge-success'>21-06-2025 21:16:36</span>
+                  <span class='badge badge-danger'>21-06-2025 21:16:38</span>
+                  <span class='badge badge-default'>2174.1 ms</span>
+                  &middot; <span class='uri-anchor badge badge-default'>#test-id=9</span>
+                  <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+                  <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+                  <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+                </div>
+ <div class="m-t-15"> <span class="badge badge-pill badge-default"><i class="fa fa-user-o"></i> QA_Automation</span>   <span class="badge badge-pill badge-default"><i class="fa fa-tag"></i> User Profile and Order History</span> </div>               </div>
+            </div>
+
+
+<div class="detail-body mt-4">
+
+
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>Jun 21, 2025 21:16:36</td>
+        <td>
+Tags:         </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>Jun 21, 2025 21:16:36</td>
+        <td>
+Browser: chrome        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>Jun 21, 2025 21:16:38</td>
+        <td>
+Scenario passed        </td>
+      </tr>
+  </tbody>
+</table></div>
+          </div>
+        </li>
+        <li class="test-item" status="fail" test-id="13"
+          author="QA_Automation "
+          tag="Login Functionality "
+          device="">
+          <div class="test-detail">
+            <p class="name">Login Functionality - Validating the Login functionality of Automation Excersice Application</p>
+            <p class="text-sm">
+              <span>21:16:43</span> / <span>101073.09 ms</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+            <div class="detail-head">
+              <div class="p-v-10">
+                <div class="info">
+                  <h5 class="test-status text-fail">Login Functionality - Validating the Login functionality of Automation Excersice Application</h5>
+                  <span class='badge badge-success'>21-06-2025 21:16:43</span>
+                  <span class='badge badge-danger'>21-06-2025 21:18:24</span>
+                  <span class='badge badge-default'>101073.09 ms</span>
+                  &middot; <span class='uri-anchor badge badge-default'>#test-id=13</span>
+                  <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+                  <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+                  <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+                </div>
+ <div class="m-t-15"> <span class="badge badge-pill badge-default"><i class="fa fa-user-o"></i> QA_Automation</span>   <span class="badge badge-pill badge-default"><i class="fa fa-tag"></i> Login Functionality</span> </div>               </div>
+            </div>
+
+
+<div class="detail-body mt-4">
+
+
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>Jun 21, 2025 21:16:43</td>
+        <td>
+Tags:         </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>Jun 21, 2025 21:16:43</td>
+        <td>
+Browser: chrome        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>Jun 21, 2025 21:18:24</td>
+        <td>
+The HTTP request to the remote WebDriver server for URL http://localhost:54144/session/2f512d23dd4aae5f12d0808f9d03ae64/element/f.795FCF738204C0010D8BCB9C9E410923.d.40EC98D3E5FC2D91A7662229E58365FB.e.54/click timed out after 60 seconds.        </td>
+      </tr>
+  </tbody>
+</table></div>
+  <div class="mt-4">
+  <div class="accordion">
+      <div class="card">
+        <div class="card-header">
+            <div class="card-toolbar node-info">
+            <ul class="list-inline d-none d-sm-block">
+              <li><span class="badge pass-bg log ">Pass</span></li>
+              <li title="Time taken"><span class='badge badge-default'>701.52</span></li>
+            </ul>
+          </div>
+          <div class="card-title">
+            <div class="node" id="14">user navigate to the login page</div>
+            <div class="node-attr">
+                 <span class="badge badge-pill badge-default"><i class="fa fa-user-o"></i> QA_Automation</span>   <span class="badge badge-pill badge-default"><i class="fa fa-tag"></i> Login Functionality</span> 
+            </div>
+          </div>
+        </div>
+        <div class="collapse">
+          <div class="card-body">
+            <div class="detail-body mt-4">
+
+
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>Jun 21, 2025 21:16:57</td>
+        <td>
+Step passed        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>Jun 21, 2025 21:16:57</td>
+        <td>
+Sent Keys 'test970@gmail.com' to element: By.XPath: //input[@data-qa='login-email']        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>Jun 21, 2025 21:16:57</td>
+        <td>
+Sent Keys 'test@970' to element: By.XPath: //input[@data-qa='login-password']        </td>
+      </tr>
+  </tbody>
+</table>            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+            <div class="card-toolbar node-info">
+            <ul class="list-inline d-none d-sm-block">
+              <li><span class="badge pass-bg log ">Pass</span></li>
+              <li title="Time taken"><span class='badge badge-default'>0.05</span></li>
+            </ul>
+          </div>
+          <div class="card-title">
+            <div class="node" id="15">user enters valid credentials</div>
+            <div class="node-attr">
+                 <span class="badge badge-pill badge-default"><i class="fa fa-user-o"></i> QA_Automation</span>   <span class="badge badge-pill badge-default"><i class="fa fa-tag"></i> Login Functionality</span> 
+            </div>
+          </div>
+        </div>
+        <div class="collapse">
+          <div class="card-body">
+            <div class="detail-body mt-4">
+
+
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>Jun 21, 2025 21:16:57</td>
+        <td>
+Step passed        </td>
+      </tr>
+  </tbody>
+</table>            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+            <div class="card-toolbar node-info">
+            <ul class="list-inline d-none d-sm-block">
+              <li><span class="badge fail-bg log ">Fail</span></li>
+              <li title="Time taken"><span class='badge badge-default'>26485.01</span></li>
+            </ul>
+          </div>
+          <div class="card-title">
+            <div class="node" id="21">user click the login button</div>
+            <div class="node-attr">
+                 <span class="badge badge-pill badge-default"><i class="fa fa-user-o"></i> QA_Automation</span>   <span class="badge badge-pill badge-default"><i class="fa fa-tag"></i> Login Functionality</span> 
+            </div>
+              <div class="status-avatar float-right"><i class="fa fa-paperclip"></i></div>
+          </div>
+        </div>
+        <div class="">
+          <div class="card-body">
+            <div class="detail-body mt-4">
+
+
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>Jun 21, 2025 21:18:24</td>
+        <td>
+OpenQA.Selenium.WebDriverException: The HTTP request to the remote WebDriver server for URL http://localhost:54144/session/2f512d23dd4aae5f12d0808f9d03ae64/element/f.795FCF738204C0010D8BCB9C9E410923.d.40EC98D3E5FC2D91A7662229E58365FB.e.54/click timed out after 60 seconds.
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 60 seconds elapsing.
+ ---> System.TimeoutException: The operation was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: The operation was canceled.
+ ---> System.IO.IOException: Unable to read data from the transport connection: The I/O operation has been aborted because of either a thread exit or an application request..
+ ---> System.Net.Sockets.SocketException (995): The I/O operation has been aborted because of either a thread exit or an application request.
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource<System.Int32>.GetResult(Int16 token)
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpClient.HandleFailure(Exception e, Boolean telemetryStarted, HttpResponseMessage response, CancellationTokenSource cts, CancellationToken cancellationToken, CancellationTokenSource pendingRequestsCts)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.MakeHttpRequest(HttpRequestInfo requestInfo)
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.ExecuteAsync(Command commandToExecute)
+   --- End of inner exception stack trace ---
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.ExecuteAsync(Command commandToExecute)
+   at OpenQA.Selenium.Remote.DriverServiceCommandExecutor.ExecuteAsync(Command commandToExecute)
+   at OpenQA.Selenium.WebDriver.ExecuteAsync(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebElement.Execute(String commandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebElement.Click()
+   at AutomationExcercise.Pages.BasePage.Click(By locator) in C:\Users\MYPC\OneDrive\Desktop\Raviprasad\AutomationExcercise\Pages\BasePage.cs:line 53
+   at AutomationExcercise.Pages.LoginPage.ClickLogin() in C:\Users\MYPC\OneDrive\Desktop\Raviprasad\AutomationExcercise\Pages\LoginPage.cs:line 42
+   at AutomationExcercise.StepDefinations.LoginSteps.WhenUserClickTheLoginButton() in C:\Users\MYPC\OneDrive\Desktop\Raviprasad\AutomationExcercise\StepDefinations\LoginSteps.cs:line 42
+   at InvokeStub_Action`1.Invoke(Object, Span`1)
+   at System.Reflection.MethodBaseInvoker.InvokeWithOneArg(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+--- End of stack trace from previous location ---
+   at Reqnroll.Bindings.BindingInvoker.InvokeBindingAsync(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, DurationHolder durationHolder)
+   at Reqnroll.Infrastructure.TestExecutionEngine.ExecuteStepMatchAsync(BindingMatch match, Object[] arguments, DurationHolder durationHolder)
+   at Reqnroll.Infrastructure.TestExecutionEngine.ExecuteStepAsync(IContextManager contextManager, StepInstance stepInstance)        </td>
+      </tr>
+  </tbody>
+</table>            </div>
+
+  <div class="row mb-3">
+   <div class="col-md-3">
+     <img data-featherlight='Screenshots\Validating the Login functionality of Automation Excersice Application\user click the login button_20250621_211757.png' src="Screenshots\Validating the Login functionality of Automation Excersice Application\user click the login button_20250621_211757.png">
+  </div>
+ </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div> 
+          </div>
+        </li>
+        <li class="test-item" status="fail" test-id="20"
+          author="QA_Automation "
+          tag="Product Search and Detail View "
+          device="">
+          <div class="test-detail">
+            <p class="name">Product Search and Detail View - View product details from listing</p>
+            <p class="text-sm">
+              <span>21:17:57</span> / <span>126019.28 ms</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+            <div class="detail-head">
+              <div class="p-v-10">
+                <div class="info">
+                  <h5 class="test-status text-fail">Product Search and Detail View - View product details from listing</h5>
+                  <span class='badge badge-success'>21-06-2025 21:17:57</span>
+                  <span class='badge badge-danger'>21-06-2025 21:20:03</span>
+                  <span class='badge badge-default'>126019.28 ms</span>
+                  &middot; <span class='uri-anchor badge badge-default'>#test-id=20</span>
+                  <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+                  <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+                  <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+                </div>
+ <div class="m-t-15"> <span class="badge badge-pill badge-default"><i class="fa fa-user-o"></i> QA_Automation</span>   <span class="badge badge-pill badge-default"><i class="fa fa-tag"></i> Product Search and Detail View</span> </div>               </div>
+            </div>
+
+
+<div class="detail-body mt-4">
+
+
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>Jun 21, 2025 21:17:57</td>
+        <td>
+Tags:         </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>Jun 21, 2025 21:17:57</td>
+        <td>
+Browser: chrome        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>Jun 21, 2025 21:20:03</td>
+        <td>
+The HTTP request to the remote WebDriver server for URL http://localhost:54235/session/e6e2a41f89d9374d884905c6f6c00e8a/element/f.D3B87E651D0FCA94A28281C848FC48DC.d.56D47A4634EBD10091BB0A7441BBADDC.e.56/click timed out after 60 seconds.        </td>
+      </tr>
+  </tbody>
+</table></div>
+  <div class="mt-4">
+  <div class="accordion">
+      <div class="card">
+        <div class="card-header">
+            <div class="card-toolbar node-info">
+            <ul class="list-inline d-none d-sm-block">
+              <li><span class="badge pass-bg log ">Pass</span></li>
+              <li title="Time taken"><span class='badge badge-default'>487.51</span></li>
+            </ul>
+          </div>
+          <div class="card-title">
+            <div class="node" id="22">user navigate to the login page</div>
+            <div class="node-attr">
+                 <span class="badge badge-pill badge-default"><i class="fa fa-user-o"></i> QA_Automation</span>   <span class="badge badge-pill badge-default"><i class="fa fa-tag"></i> Product Search and Detail View</span> 
+            </div>
+          </div>
+        </div>
+        <div class="collapse">
+          <div class="card-body">
+            <div class="detail-body mt-4">
+
+
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>Jun 21, 2025 21:18:12</td>
+        <td>
+Step passed        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>Jun 21, 2025 21:18:12</td>
+        <td>
+Sent Keys 'test970@gmail.com' to element: By.XPath: //input[@data-qa='login-email']        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>Jun 21, 2025 21:18:12</td>
+        <td>
+Sent Keys 'test@970' to element: By.XPath: //input[@data-qa='login-password']        </td>
+      </tr>
+  </tbody>
+</table>            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+            <div class="card-toolbar node-info">
+            <ul class="list-inline d-none d-sm-block">
+              <li><span class="badge pass-bg log ">Pass</span></li>
+              <li title="Time taken"><span class='badge badge-default'>0.03</span></li>
+            </ul>
+          </div>
+          <div class="card-title">
+            <div class="node" id="23">user enters valid credentials</div>
+            <div class="node-attr">
+                 <span class="badge badge-pill badge-default"><i class="fa fa-user-o"></i> QA_Automation</span>   <span class="badge badge-pill badge-default"><i class="fa fa-tag"></i> Product Search and Detail View</span> 
+            </div>
+          </div>
+        </div>
+        <div class="collapse">
+          <div class="card-body">
+            <div class="detail-body mt-4">
+
+
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>Jun 21, 2025 21:18:12</td>
+        <td>
+Step passed        </td>
+      </tr>
+  </tbody>
+</table>            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+            <div class="card-toolbar node-info">
+            <ul class="list-inline d-none d-sm-block">
+              <li><span class="badge fail-bg log ">Fail</span></li>
+              <li title="Time taken"><span class='badge badge-default'>50849.15</span></li>
+            </ul>
+          </div>
+          <div class="card-title">
+            <div class="node" id="24">user click the login button</div>
+            <div class="node-attr">
+                 <span class="badge badge-pill badge-default"><i class="fa fa-user-o"></i> QA_Automation</span>   <span class="badge badge-pill badge-default"><i class="fa fa-tag"></i> Product Search and Detail View</span> 
+            </div>
+              <div class="status-avatar float-right"><i class="fa fa-paperclip"></i></div>
+          </div>
+        </div>
+        <div class="">
+          <div class="card-body">
+            <div class="detail-body mt-4">
+
+
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>Jun 21, 2025 21:20:03</td>
+        <td>
+OpenQA.Selenium.WebDriverException: The HTTP request to the remote WebDriver server for URL http://localhost:54235/session/e6e2a41f89d9374d884905c6f6c00e8a/element/f.D3B87E651D0FCA94A28281C848FC48DC.d.56D47A4634EBD10091BB0A7441BBADDC.e.56/click timed out after 60 seconds.
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 60 seconds elapsing.
+ ---> System.TimeoutException: The operation was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: The operation was canceled.
+ ---> System.IO.IOException: Unable to read data from the transport connection: The I/O operation has been aborted because of either a thread exit or an application request..
+ ---> System.Net.Sockets.SocketException (995): The I/O operation has been aborted because of either a thread exit or an application request.
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource<System.Int32>.GetResult(Int16 token)
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpClient.HandleFailure(Exception e, Boolean telemetryStarted, HttpResponseMessage response, CancellationTokenSource cts, CancellationToken cancellationToken, CancellationTokenSource pendingRequestsCts)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.MakeHttpRequest(HttpRequestInfo requestInfo)
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.ExecuteAsync(Command commandToExecute)
+   --- End of inner exception stack trace ---
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.ExecuteAsync(Command commandToExecute)
+   at OpenQA.Selenium.Remote.DriverServiceCommandExecutor.ExecuteAsync(Command commandToExecute)
+   at OpenQA.Selenium.WebDriver.ExecuteAsync(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebElement.Execute(String commandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebElement.Click()
+   at AutomationExcercise.Pages.BasePage.Click(By locator) in C:\Users\MYPC\OneDrive\Desktop\Raviprasad\AutomationExcercise\Pages\BasePage.cs:line 53
+   at AutomationExcercise.Pages.LoginPage.ClickLogin() in C:\Users\MYPC\OneDrive\Desktop\Raviprasad\AutomationExcercise\Pages\LoginPage.cs:line 42
+   at AutomationExcercise.StepDefinations.LoginSteps.WhenUserClickTheLoginButton() in C:\Users\MYPC\OneDrive\Desktop\Raviprasad\AutomationExcercise\StepDefinations\LoginSteps.cs:line 42
+   at InvokeStub_Action`1.Invoke(Object, Span`1)
+   at System.Reflection.MethodBaseInvoker.InvokeWithOneArg(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+--- End of stack trace from previous location ---
+   at Reqnroll.Bindings.BindingInvoker.InvokeBindingAsync(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, DurationHolder durationHolder)
+   at Reqnroll.Infrastructure.TestExecutionEngine.ExecuteStepMatchAsync(BindingMatch match, Object[] arguments, DurationHolder durationHolder)
+   at Reqnroll.Infrastructure.TestExecutionEngine.ExecuteStepAsync(IContextManager contextManager, StepInstance stepInstance)        </td>
+      </tr>
+  </tbody>
+</table>            </div>
+
+  <div class="row mb-3">
+   <div class="col-md-3">
+     <img data-featherlight='Screenshots\View product details from listing\user click the login button_20250621_211913.png' src="Screenshots\View product details from listing\user click the login button_20250621_211913.png">
+  </div>
+ </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div> 
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="test-content scrollable">
+    <div class="test-content-tools">
+      <ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+    </div>
+    <div class="test-content-detail"><div class="detail-body"></div></div>
+  </div>
+</div>
+
+
+<div class="test-wrapper row view category-view attributes-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+      <ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
+      <ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">5</span></a></li></ul>
+    </div>
+    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item">
+          <div class="test-detail">
+            <span class="meta">
+ <span class='badge log pass-bg'>2</span>             </span>
+            <p class="name">Checkout with Payment</p>
+            <p class="duration text-sm">2 tests</p>
+          </div>
+          <div class="test-contents d-none">
+            <div class="info">
+              <h4>Checkout with Payment</h4>
+ <span status="pass" class='badge log pass-bg'>2 passed</span>             </div>
+            <table class='table table-sm mt-4'>
+              <thead>
+                <tr>
+                  <th class="status-col">Status</th>
+                  <th class="timestamp-col">Timestamp</th>
+                  <th>TestName</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="tag-test-status" status="pass">
+                  <td><span class="badge log pass-bg">Pass</span></td>
+                  <td>21:16:24</td>
+                  <td>
+                    <a href="#" class="linked" test-id='2' id='2'>Checkout with Payment - Place order successfully</a>
+                  </td>
+                </tr>
+                <tr class="tag-test-status" status="pass">
+                  <td><span class="badge log pass-bg">Pass</span></td>
+                  <td>21:16:35</td>
+                  <td>
+                    <a href="#" class="linked" test-id='8' id='8'>Checkout with Payment - Place order with invalid payment</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </li>
+        <li class="test-item">
+          <div class="test-detail">
+            <span class="meta">
+ <span class='badge log pass-bg'>2</span>             </span>
+            <p class="name">User Profile and Order History</p>
+            <p class="duration text-sm">2 tests</p>
+          </div>
+          <div class="test-contents d-none">
+            <div class="info">
+              <h4>User Profile and Order History</h4>
+ <span status="pass" class='badge log pass-bg'>2 passed</span>             </div>
+            <table class='table table-sm mt-4'>
+              <thead>
+                <tr>
+                  <th class="status-col">Status</th>
+                  <th class="timestamp-col">Timestamp</th>
+                  <th>TestName</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="tag-test-status" status="pass">
+                  <td><span class="badge log pass-bg">Pass</span></td>
+                  <td>21:16:26</td>
+                  <td>
+                    <a href="#" class="linked" test-id='4' id='4'>User Profile and Order History - Edit user profile information</a>
+                  </td>
+                </tr>
+                <tr class="tag-test-status" status="pass">
+                  <td><span class="badge log pass-bg">Pass</span></td>
+                  <td>21:16:36</td>
+                  <td>
+                    <a href="#" class="linked" test-id='9' id='9'>User Profile and Order History - View past orders</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </li>
+        <li class="test-item">
+          <div class="test-detail">
+            <span class="meta">
+ <span class='badge log pass-bg'>1</span>  <span class='badge log badge-danger'>1</span>             </span>
+            <p class="name">Product Search and Detail View</p>
+            <p class="duration text-sm">2 tests</p>
+          </div>
+          <div class="test-contents d-none">
+            <div class="info">
+              <h4>Product Search and Detail View</h4>
+ <span status="pass" class='badge log pass-bg'>1 passed</span>  <span status="fail" class='badge log badge-danger'>1 failed</span>             </div>
+            <table class='table table-sm mt-4'>
+              <thead>
+                <tr>
+                  <th class="status-col">Status</th>
+                  <th class="timestamp-col">Timestamp</th>
+                  <th>TestName</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="tag-test-status" status="pass">
+                  <td><span class="badge log pass-bg">Pass</span></td>
+                  <td>21:16:26</td>
+                  <td>
+                    <a href="#" class="linked" test-id='3' id='3'>Product Search and Detail View - Search for an existing product</a>
+                  </td>
+                </tr>
+                <tr class="tag-test-status" status="fail">
+                  <td><span class="badge log fail-bg">Fail</span></td>
+                  <td>21:17:57</td>
+                  <td>
+                    <a href="#" class="linked" test-id='20' id='20'>Product Search and Detail View - View product details from listing</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </li>
+        <li class="test-item">
+          <div class="test-detail">
+            <span class="meta">
+ <span class='badge log badge-danger'>2</span>             </span>
+            <p class="name">Login Functionality</p>
+            <p class="duration text-sm">2 tests</p>
+          </div>
+          <div class="test-contents d-none">
+            <div class="info">
+              <h4>Login Functionality</h4>
+ <span status="fail" class='badge log badge-danger'>2 failed</span>             </div>
+            <table class='table table-sm mt-4'>
+              <thead>
+                <tr>
+                  <th class="status-col">Status</th>
+                  <th class="timestamp-col">Timestamp</th>
+                  <th>TestName</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="tag-test-status" status="fail">
+                  <td><span class="badge log fail-bg">Fail</span></td>
+                  <td>21:16:24</td>
+                  <td>
+                    <a href="#" class="linked" test-id='1' id='1'>Login Functionality - Unsuccessful login with invalid credentials</a>
+                  </td>
+                </tr>
+                <tr class="tag-test-status" status="fail">
+                  <td><span class="badge log fail-bg">Fail</span></td>
+                  <td>21:16:43</td>
+                  <td>
+                    <a href="#" class="linked" test-id='13' id='13'>Login Functionality - Validating the Login functionality of Automation Excersice Application</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </li>
+        <li class="test-item">
+          <div class="test-detail">
+            <span class="meta">
+ <span class='badge log pass-bg'>2</span>             </span>
+            <p class="name">Shopping Cart Operations</p>
+            <p class="duration text-sm">2 tests</p>
+          </div>
+          <div class="test-contents d-none">
+            <div class="info">
+              <h4>Shopping Cart Operations</h4>
+ <span status="pass" class='badge log pass-bg'>2 passed</span>             </div>
+            <table class='table table-sm mt-4'>
+              <thead>
+                <tr>
+                  <th class="status-col">Status</th>
+                  <th class="timestamp-col">Timestamp</th>
+                  <th>TestName</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="tag-test-status" status="pass">
+                  <td><span class="badge log pass-bg">Pass</span></td>
+                  <td>21:16:26</td>
+                  <td>
+                    <a href="#" class="linked" test-id='5' id='5'>Shopping Cart Operations - Remove product from cart</a>
+                  </td>
+                </tr>
+                <tr class="tag-test-status" status="pass">
+                  <td><span class="badge log pass-bg">Pass</span></td>
+                  <td>21:16:34</td>
+                  <td>
+                    <a href="#" class="linked" test-id='7' id='7'>Shopping Cart Operations - Update product quantity in cart</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="test-content scrollable">
+    <div class="test-content-detail">
+      <div class="detail-body"></div>
+    </div>
+  </div>
+</div>
+
+<div class="test-wrapper row view author-view attributes-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+      <ul class="tools pull-left"><li><a href=""><span class="font-size-14">Author</span></a></li></ul>
+      <ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
+    </div>
+    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item">
+          <div class="test-detail">
+            <span class="meta">
+ <span class='badge log pass-bg'>7</span>  <span class='badge log badge-danger'>3</span>             </span>
+            <p class="name">QA_Automation</p>
+            <p class="duration text-sm">10 tests</p>
+          </div>
+          <div class="test-contents d-none">
+            <div class="info">
+              <h4>QA_Automation</h4>
+ <span status="pass" class='badge log pass-bg'>7 passed</span>  <span status="fail" class='badge log badge-danger'>3 failed</span>             </div>
+            <table class='table table-sm mt-4'>
+              <thead>
+                <tr>
+                  <th class="status-col">Status</th>
+                  <th class="timestamp-col">Timestamp</th>
+                  <th>TestName</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="tag-test-status" status="fail">
+                  <td><span class="badge log fail-bg">Fail</span></td>
+                  <td>21:16:24</td>
+                  <td>
+                    <a href="#" class="linked" test-id='1' id='1'>Login Functionality - Unsuccessful login with invalid credentials</a>
+                  </td>
+                </tr>
+                <tr class="tag-test-status" status="pass">
+                  <td><span class="badge log pass-bg">Pass</span></td>
+                  <td>21:16:24</td>
+                  <td>
+                    <a href="#" class="linked" test-id='2' id='2'>Checkout with Payment - Place order successfully</a>
+                  </td>
+                </tr>
+                <tr class="tag-test-status" status="pass">
+                  <td><span class="badge log pass-bg">Pass</span></td>
+                  <td>21:16:26</td>
+                  <td>
+                    <a href="#" class="linked" test-id='3' id='3'>Product Search and Detail View - Search for an existing product</a>
+                  </td>
+                </tr>
+                <tr class="tag-test-status" status="pass">
+                  <td><span class="badge log pass-bg">Pass</span></td>
+                  <td>21:16:26</td>
+                  <td>
+                    <a href="#" class="linked" test-id='4' id='4'>User Profile and Order History - Edit user profile information</a>
+                  </td>
+                </tr>
+                <tr class="tag-test-status" status="pass">
+                  <td><span class="badge log pass-bg">Pass</span></td>
+                  <td>21:16:26</td>
+                  <td>
+                    <a href="#" class="linked" test-id='5' id='5'>Shopping Cart Operations - Remove product from cart</a>
+                  </td>
+                </tr>
+                <tr class="tag-test-status" status="pass">
+                  <td><span class="badge log pass-bg">Pass</span></td>
+                  <td>21:16:34</td>
+                  <td>
+                    <a href="#" class="linked" test-id='7' id='7'>Shopping Cart Operations - Update product quantity in cart</a>
+                  </td>
+                </tr>
+                <tr class="tag-test-status" status="pass">
+                  <td><span class="badge log pass-bg">Pass</span></td>
+                  <td>21:16:35</td>
+                  <td>
+                    <a href="#" class="linked" test-id='8' id='8'>Checkout with Payment - Place order with invalid payment</a>
+                  </td>
+                </tr>
+                <tr class="tag-test-status" status="pass">
+                  <td><span class="badge log pass-bg">Pass</span></td>
+                  <td>21:16:36</td>
+                  <td>
+                    <a href="#" class="linked" test-id='9' id='9'>User Profile and Order History - View past orders</a>
+                  </td>
+                </tr>
+                <tr class="tag-test-status" status="fail">
+                  <td><span class="badge log fail-bg">Fail</span></td>
+                  <td>21:16:43</td>
+                  <td>
+                    <a href="#" class="linked" test-id='13' id='13'>Login Functionality - Validating the Login functionality of Automation Excersice Application</a>
+                  </td>
+                </tr>
+                <tr class="tag-test-status" status="fail">
+                  <td><span class="badge log fail-bg">Fail</span></td>
+                  <td>21:17:57</td>
+                  <td>
+                    <a href="#" class="linked" test-id='20' id='20'>Product Search and Detail View - View product details from listing</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="test-content scrollable">
+    <div class="test-content-detail">
+      <div class="detail-body"></div>
+    </div>
+  </div>
+</div>
+     
+
+<div class="container-fluid p-4 view dashboard-view">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="card"><div class="card-body">
+          <p class="m-b-0">Started</p>
+          <h3>21-06-2025 21:16:04</h3>
+      </div></div>
+    </div>
+    <div class="col-md-3">
+      <div class="card"><div class="card-body">
+          <p class="m-b-0">Ended</p>
+          <h3>21-06-2025 21:20:04</h3>
+      </div></div>
+    </div>
+    <div class="col-md-3">
+      <div class="card"><div class="card-body">
+          <p class="m-b-0 text-pass">Tests Passed</p>
+          <h3>7</h3>
+      </div></div>
+    </div>
+    <div class="col-md-3">
+      <div class="card"><div class="card-body">
+          <p class="m-b-0 text-fail">Tests Failed</p>
+          <h3>3</h3>
+      </div></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header">
+          <h6 class="card-title">Tests</h6>
+        </div>
+        <div class="card-body">
+          <div class="">
+            <canvas id='parent-analysis' width='115' height='90'></canvas>
+          </div>
+        </div>
+        <div class="card-footer">
+          <div><small data-tooltip='0%'>
+            <b>7</b> tests passed
+            </small>
+          </div>
+          <div>
+            <small data-tooltip='0%'><b>3</b> tests failed, 
+            <b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+            </small>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header">
+          <h6 class="card-title">Steps</h6>
+        </div>
+        <div class="card-body">
+          <div class="">
+            <canvas id='child-analysis' width='115' height='90'></canvas>
+          </div>
+        </div>
+        <div class="card-footer">
+          <div><small data-tooltip='0%'><b>11</b> steps passed</small></div>
+          <div>
+            <small data-tooltip='0%'><b>3</b> steps failed, 
+            <b>0</b> skipped, <b data-tooltip='%'>0</b> others
+            </small>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header">
+          <h6 class="card-title">Log events</h6>
+        </div>
+        <div class="card-body">
+          <div class="">
+            <canvas id='events-analysis' width='115' height='90'></canvas>
+          </div>
+        </div>
+        <div class="card-footer">
+          <div><small data-tooltip='0%'><b>18</b> events passed</small></div>
+          <div>
+            <small data-tooltip='0%'><b>6</b> events failed, 
+            <b data-tooltip='%'>31</b> others
+            </small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row"><div class="col-md-12">
+    <div class="card"><div class="card-header"><p>Timeline</p></div>
+      <div class="card-body pt-0"><div>
+        <canvas id="timeline" height="120"></canvas>
+      </div></div>
+    </div>
+  </div></div>
+  <script>
+	var timeline = { "Login Functionality - Unsuccessful login with invalid credentials":12920.4649,"Checkout with Payment - Place order successfully":6784.9675,"Product Search and Detail View - Search for an existing product":89349.6001,"User Profile and Order History - Edit user profile information":3521.2329,"Shopping Cart Operations - Remove product from cart":3514.715,"Shopping Cart Operations - Update product quantity in cart":5960.148,"Checkout with Payment - Place order with invalid payment":2384.6986,"User Profile and Order History - View past orders":2174.097,"Login Functionality - Validating the Login functionality of Automation Excersice Application":101073.0896,"Product Search and Detail View - View product details from listing":126019.2764 };
+  </script>
+  <div class="row">
+    <div class="col-md-4 author-container">
+      <div class="card">
+        <div class="card-header"><p>Author</p></div>
+        <div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+          <thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead>
+          <tbody>
+            <tr>
+              <td>QA_Automation</td>
+              <td>7</td>
+              <td>3</td>
+              <td>0</td>
+              <td>0</td>
+              <td>70%</td>
+            </tr>
+          </tbody>
+        </table></div>
+      </div>
+    </div>
+    <div class="col-md-4 category-container">
+      <div class="card">
+        <div class="card-header"><p>Tags</p></div>
+        <div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+          <thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
+            <tr>
+              <td>Checkout with Payment</td>
+              <td>2</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>100%</td>
+            </tr>
+            <tr>
+              <td>User Profile and Order History</td>
+              <td>2</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>100%</td>
+            </tr>
+            <tr>
+              <td>Product Search and Detail View</td>
+              <td>1</td>
+              <td>1</td>
+              <td>0</td>
+              <td>0</td>
+              <td>50%</td>
+            </tr>
+            <tr>
+              <td>Login Functionality</td>
+              <td>0</td>
+              <td>2</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0%</td>
+            </tr>
+            <tr>
+              <td>Shopping Cart Operations</td>
+              <td>2</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>100%</td>
+            </tr>
+          </tbody>
+        </table></div>
+      </div>
+    </div>
+      <div class="col-md-4 sysenv-container">
+      <div class="card">
+        <div class="card-header"><p>System/Environment</p></div>
+        <div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+          <thead><tr class="bg-gray"><th>Name</th><th>Value</th></tr></thead>
+          <tbody>
+            <tr>
+              <td>Environment</td>
+              <td>QA</td>
+            </tr>
+            <tr>
+              <td>Browser</td>
+              <td>chrome</td>
+            </tr>
+            <tr>
+              <td>Machine</td>
+              <td>DESKTOP-F0PKAK4</td>
+            </tr>
+            <tr>
+              <td>User</td>
+              <td>MYPC</td>
+            </tr>
+            <tr>
+              <td>Build</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Branch</td>
+              <td>main</td>
+            </tr>
+            <tr>
+              <td>OS</td>
+              <td>Microsoft Windows NT 10.0.26100.0</td>
+            </tr>
+          </tbody>
+        </table></div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  var statusGroup = {
+    parentCount: 10,
+    childCount: 14,
+    grandChildCount: 0,
+    eventsCount: 55,
+
+passParent:7,failParent:3,warningParent:0,skipParent:0,    
+passChild:11,failChild:3,warningChild:0,skipChild:0,infoChild:0,    
+passGrandChild:0,failGrandChild:0,warningGrandChild:0,skipGrandChild:0,infoGrandChild:0,    
+passEvents:18,failEvents:6,warningEvents:0,skipEvents:0,infoEvents:31,  };
+</script>
+
+<div class="test-wrapper row view log-view">
+ <div class="col-md-12 mt-3">
+  <div class="card"><div class="card-body">
+Test run ended at: 21-06-2025 21:20:04  </div></div>
+ </div>
+</div>
+    </div>
+   </div>
+  </div>
+ </div>
+ <script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@c439bdbc7bade3d85af3b90e9e69c30ebc87445f/spark/js/spark-script.js"></script>
+<script type='text/javascript'></script>
+</body>
+</html>
